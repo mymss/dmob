@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     EditText et_name, et_age;
     ListView lv_customerListe;
 
+  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btn_ViewAll = findViewById(R.id.btn_ViewAll);
         et_name = findViewById(R.id.et_name);
         et_age = findViewById(R.id.et_age);
-        lv_customerListe = findViewById(R.id.lv_CustomerListe);
+        lv_customerListe = findViewById(R.id.lv_listView_AllUsers);
         // button listeners for the add and view all buttons
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,9 +53,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 DataBaseParkTime dataBaseParkTime = new DataBaseParkTime(MainActivity.this);
                 List<CustomerModel> everyone = dataBaseParkTime.getEveryone();
-
-
-                Toast.makeText(MainActivity.this,everyone.toString(),Toast.LENGTH_SHORT).show();
+                ArrayAdapter customerArrayAdapter = new ArrayAdapter<CustomerModel>(MainActivity.this, android.R.layout.simple_list_item_1,everyone);
+                lv_customerListe.setAdapter(customerArrayAdapter);
             }
 
         });
