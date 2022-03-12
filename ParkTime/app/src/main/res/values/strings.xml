@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">parkTime</string>
+
+    <!-- Page admin -->
+
+    <string name="admin_page_title">Admin</string>
+    <string name="admin_page_create_park">Ajouter un parc </string>
+
+
+
+    <!-- Page d'accueil -->
+
+    <string name="home_page_title">Selectionnez un parc</string>
+    <string name="home_page_park_name">Nom du parc</string>
+    <string name="home_page_park_address">Adresse du parc</string>
+    <string name="home_page_park_desc">
+        Sélectionnez un parc et vous y trouverez les parents disponibles pour un ParkTime !</string>
+
+
+    <!-- Détail parc popup -->
+    <string name="popup_park_name">@string/home_page_park_name</string>
+    <string name="popup_park_address">@string/home_page_park_address</string>
+    <string name="popup_park_desc">Description du parc</string>
+
+    <!-- Page liste parents -->
+    <string name="list_parent_pseudo">@string/profile_main_pseudo</string>
+    <string name="list_parent_age">Age</string>
+    <string name="list_parent_nbre_enfant">Nbre enfant</string>
+
+    <!-- Page propose une rencontre-->
+    <string name="ask_for_parktime">Proposer une rencontre </string>
+    <string name="input_send_message">Votre message</string>
+    <string name="input_choose_date">DD/MM/YYYY</string>
+    <string name="input_choose_time">HH:MM</string>
+    <string name="send_proposition">Confirmer</string>
+    <!-- Page profile -->
+
+    <string name="profile_main">Votre profile</string>
+    <string name="profile_main_pseudo">Pseudo</string>
+    <string name="profile_main_firstname">Prénom</string>
+    <string name="profile_main_age">Age</string>
+    <string name="profile_main_about_you">Votre description</string>
+    <string name="profile_add_update_infos">Modifier des infos</string>
+    <string name="profile_main_parks_fav">Parcs favoris</string>
+    <string name="nom_parc">Nom parc</string>
+    <string name="adresse">Adresse</string>
+    <string name="image">Image</string>
+    <string name="show">Show</string>
+    <string name="add">add</string>
+    <string name="CustomerName">Customer Name</string>
+    <string name="CustomerAge">Customer Age</string>
+    <string name="ViewAll">View All</string>
+
+</resources>
