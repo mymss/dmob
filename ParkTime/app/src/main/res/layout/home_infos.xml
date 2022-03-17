@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/text_home_text"
-        style="@style/DefaulttextType"
+        style="@style/TitleTextType"
         android:layout_width="346dp"
         android:layout_height="139dp"
         android:text="@string/home_page_park_desc"

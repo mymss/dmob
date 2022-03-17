@@ -3,6 +3,7 @@ package ch.myriam.parktime;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     EditText et_name, et_age;
     ListView lv_customerListe;
 
-  
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         et_age = findViewById(R.id.et_age);
         lv_customerListe = findViewById(R.id.lv_listView_AllUsers);
         // button listeners for the add and view all buttons
+
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,5 +60,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    public void backHome(View v){
+        Intent i = new Intent(this,MainActivity_Home.class);
+        startActivity(i);
     }
 }
