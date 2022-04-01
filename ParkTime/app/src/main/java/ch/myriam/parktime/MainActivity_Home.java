@@ -2,11 +2,13 @@ package ch.myriam.parktime;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-public class MainActivity_Home extends AppCompatActivity {
+import ch.myriam.parktime.fragments.FragmentHome;
 
+public class MainActivity_Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,8 +19,10 @@ public class MainActivity_Home extends AppCompatActivity {
                 return;
             }
             FragmentHome fragmentHome = new FragmentHome();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,fragmentHome,null);
+            //injecter le fragment dans notre boite (fragment_container)
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragmentHome,null);
             fragmentTransaction.commit();
         }
+
     }
 }
