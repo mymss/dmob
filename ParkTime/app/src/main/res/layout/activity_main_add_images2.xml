@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityAddImages2">
+
+    <TextView
+        android:id="@+id/app_title"
+        style="@style/DefaulttextType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/page_title"
+        style="@style/TitleTextType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ajouter_un_park"
+        app:layout_constraintStart_toStartOf="@+id/app_title"
+        app:layout_constraintTop_toBottomOf="@+id/app_title"
+        />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutid"
+        android:name=""
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+
+
+        <EditText
+            android:id="@+id/editpark_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/entrer_le_nom_du_park"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateClickableBoundsCheck" />
+
+        <EditText
+            android:id="@+id/editpark_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:autofillHints=""
+            android:hint="@string/entrer_une_courte_description"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editpark_localisation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:autofillHints=""
+            android:hint="@string/exemple_1201_paquis"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editpark_rue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:autofillHints=""
+            android:hint="@string/nom_de_la_rue"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageToAdd"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="250dp" />
+
+        <Button
+            android:id="@+id/addParkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:text="@string/save_park"
+            android:textSize="24sp" />
+
+    </FrameLayout>
+
+</RelativeLayout>

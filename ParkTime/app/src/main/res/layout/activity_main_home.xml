@@ -30,19 +30,25 @@
         />
 
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/frameLayoutid"
         android:name=""
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        >
+        android:layout_marginTop="20dp">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView"
-            android:name="ch.myriam.parktime.fragments.FragmentHome"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout="@layout/fragment_home2" />
+            android:id="@+id/titleimg"
+            />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"/>
     </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
