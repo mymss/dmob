@@ -25,6 +25,7 @@ DataBaseParkTime db;
         password =(EditText) findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.btn_login);
         db = new DataBaseParkTime(this);
+
        btnLogin.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
@@ -36,7 +37,12 @@ DataBaseParkTime db;
                 }
                 else{
                     Boolean checkuserpass = db.checkUsernamepassword(user,mdp);
-                    if(checkuserpass==true){
+                    if(user.equals("admin") && checkuserpass){
+                        Toast.makeText(MainActivity_Login.this,"Welcome "+ user,Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity_AdminView.class);
+                        startActivity(intent);}
+
+                    else if (checkuserpass && !user.equals("admin")){
                         Toast.makeText(MainActivity_Login.this,"Welcome "+ user,Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), MainActivity_Home.class);
                         startActivity(intent);
@@ -46,5 +52,9 @@ DataBaseParkTime db;
                 }
            }
        });
+    }
+    public void goResister(View v) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 }

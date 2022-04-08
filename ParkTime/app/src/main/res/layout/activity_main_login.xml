@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity_Login">
 
+
         <TextView
             android:id="@+id/app_title"
             style="@style/DefaulttextType"
@@ -22,27 +23,40 @@
             style="@style/TitleTextType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/se_connecter"
+            android:text="@string/cr_er_un_compte"
             app:layout_constraintStart_toStartOf="@+id/app_title"
-            app:layout_constraintTop_toBottomOf="@+id/app_title"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="237dp"
+            android:layout_height="177dp"
+            android:src="@drawable/parktimelogo"
+            android:layout_marginStart="70dp"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="87dp"
+            app:layout_constraintTop_toBottomOf="@id/page_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/username"/>
+
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
-            android:hint="Username"
+            android:layout_marginTop="8dp"
+            android:hint="@string/username"
             android:inputType="text"
             android:minHeight="48dp"
             android:selectAllOnFocus="true"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="@string/prompt_password"
@@ -51,7 +65,9 @@
             android:inputType="textPassword"
             android:minHeight="48dp"
             android:selectAllOnFocus="true"
+            app:layout_constraintBottom_toTopOf="@+id/btn_login"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/username" />
 
@@ -60,15 +76,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="64dp"
-            android:enabled="false"
+            android:layout_marginTop="12dp"
+            android:enabled="true"
             android:text="@string/connexion"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="#424242"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.463"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintVertical_bias="0.106" />
 
         <ProgressBar
             android:id="@+id/loading"
@@ -83,5 +99,23 @@
             app:layout_constraintStart_toStartOf="@+id/password"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:id="@+id/goToRegister"
+            style="@style/DefaulttextType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:onClick="goResister"
+            android:text="@string/pas_encore_de_compte"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
+            app:layout_constraintVertical_bias="0.137" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

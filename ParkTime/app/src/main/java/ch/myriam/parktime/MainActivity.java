@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         et_localite = findViewById(R.id.et_localite);
         et_mdp = findViewById(R.id.et_mdp);
         et_mdp2 = findViewById(R.id.et_mdp2);
-        btn_GoToAddPark = findViewById(R.id.btn_GoToAddPark);
         db = new DataBaseParkTime(this);
         // button listeners for the add and view all buttons
 
@@ -61,30 +60,20 @@ public class MainActivity extends AppCompatActivity {
                             Boolean insert = db.addOne(customerModel);
                             if (insert) {
                                 Toast.makeText(MainActivity.this, "Création du compte effectuée", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(),MainActivity_Home.class);
+                                Intent intent = new Intent(getApplicationContext(), MainActivity_Home.class);
                                 startActivity(intent);
-                            }else{
-                                Toast.makeText(MainActivity.this, "Création de compte échouée",Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(MainActivity.this, "Création de compte échouée", Toast.LENGTH_SHORT).show();
                             }
+                        } else {
+                            Toast.makeText(MainActivity.this, "Le nom d'utilisateur est délà existant", Toast.LENGTH_SHORT).show();
                         }
-                        else{
-                            Toast.makeText(MainActivity.this,"Le nom d'utilisateur est délà existant",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                    else{
+                    } else {
                         Toast.makeText(MainActivity.this, "Les mots de passes ne correspondent pas", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
     }
-    public void GoToAddPark(View v) {
-        Intent i = new Intent(this, MainActivityAddImages2.class);
-        startActivity(i);
-    }
-
-    public void backHome(View v) {
-        Intent i = new Intent(this, MainActivity_Home.class);
-        startActivity(i);
-    }
 }
+

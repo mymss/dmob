@@ -18,6 +18,7 @@ public class MainActivity_Home extends AppCompatActivity {
     private List<ImagesModel> parkImages ;
     private ImageParkAdapter adapter;
     private static String TAG="Parks : " ;
+    private List<ImagesModel> pagerImages = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,19 @@ public class MainActivity_Home extends AppCompatActivity {
         viewPager2.setClipChildren(false);
         viewPager2.setClipToPadding(false);
         viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback(){
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                
+            }
+        };
 
     }
 

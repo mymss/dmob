@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_AdminView">
+
+    <TextView
+        android:id="@+id/app_title"
+        style="@style/DefaulttextType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/page_title"
+        style="@style/TitleTextType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/administration"
+        app:layout_constraintStart_toStartOf="@+id/app_title"
+        app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+    <TextView
+        android:id="@+id/page_title2"
+        style="@style/TitleTextType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="84dp"
+        android:text="TABLEAU DE BORD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+    <TextView
+        android:id="@+id/tv_nbreAdhérant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="Nombre d'adhérents :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/page_title"
+        android:layout_marginLeft="8dp"/>
+
+    <TextView
+        android:id="@+id/sortieNbre"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="112dp"
+        android:text=" "
+        app:layout_constraintStart_toEndOf="@+id/tv_nbreAdhérant"
+        app:layout_constraintTop_toBottomOf="@id/page_title" />
+
+    <Button
+        android:id="@+id/btn_GoToAddPark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="408dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="GoToAddPark"
+        android:text="@string/ajouter_un_park"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/page_title" />
+
+    <Button
+        android:id="@+id/btn_GoToAddPark2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="332dp"
+        android:onClick="GoToCreateEvent"
+        android:text="Créer un evenement"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/page_title" />
+
+    <Button
+        android:id="@+id/btn_GotoActivityHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="284dp"
+        android:height="25dp"
+        android:onClick="backHome"
+        android:text="HOME"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

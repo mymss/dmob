@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityAddImages2">
+    tools:context=".MainActivity_CreateEvent">
 
     <TextView
         android:id="@+id/app_title"
@@ -22,10 +22,9 @@
         style="@style/TitleTextType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ajouter_un_park"
+        android:text="Creer un evenement"
         app:layout_constraintStart_toStartOf="@+id/app_title"
-        app:layout_constraintTop_toBottomOf="@+id/app_title"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/app_title" />
 
     <FrameLayout
         android:id="@+id/frameLayoutid"
@@ -34,24 +33,25 @@
         android:layout_height="match_parent"
         android:layout_marginTop="100dp">
 
-
-        <EditText
-            android:id="@+id/editpark_name"
+        <TextView
+            android:id="@+id/textView_ChoosePark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:hint="@string/entrer_le_nom_du_park"
-            android:inputType="text"
+            android:text="Choisir un parc"
+            app:layout_constraintStart_toEndOf="@+id/page_title"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <Spinner
+            android:id="@+id/spinnerPark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:textColorHint="#757575"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="DuplicateClickableBoundsCheck" />
+            android:spinnerMode="dropdown"
+            tools:ignore="SpeakableTextPresentCheck" />
+
 
         <EditText
-            android:id="@+id/editpark_desc"
+            android:id="@+id/createEvent_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -66,27 +66,12 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editpark_localisation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:autofillHints=""
-            android:hint="@string/exemple_1201_paquis"
-            android:inputType="text"
-            android:minHeight="48dp"
-            android:textColorHint="#757575"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/editpark_rue"
+            android:id="@+id/createEvent_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
             android:autofillHints=""
-            android:hint="@string/nom_de_la_rue"
+            android:hint="JJ/MM/AAAA"
             android:inputType="text"
             android:minHeight="48dp"
             android:textColorHint="#757575"
@@ -95,32 +80,14 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageToAdd"
-            android:layout_width="200sp"
-            android:layout_height="200sp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="250dp"
-            android:src="@drawable/ic_baseline_image_24"
-
-            />
-
         <Button
-            android:id="@+id/btn_chooseImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="450dp"
-
-            android:text="Load Image" />
-
-        <Button
-            android:id="@+id/addParkButton"
+            android:id="@+id/addEventButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="500dp"
-            android:text="@string/save_park"
+            android:text="Créer event"
             android:textSize="24sp" />
 
     </FrameLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
