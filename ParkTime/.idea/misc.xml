@@ -21,6 +21,7 @@
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/activity_main_admin_view.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/activity_main_create_event.xml" value="0.1" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/activity_main_home.xml" value="0.1" />
+        <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/activity_main_liste_parks.xml" value="0.1" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/activity_main_liste_users.xml" value="0.1" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/activity_main_login.xml" value="0.22" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/administration.xml" value="0.15172101449275363" />
@@ -33,6 +34,7 @@
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/fragment_second.xml" value="0.1421875" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/home_infos.xml" value="0.15172101449275363" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/item_horizontal_parks.xml" value="0.1" />
+        <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/list_item_park.xml" value="0.1" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/single_item.xml" value="0.1" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/spinner_layout.xml" value="0.1" />
         <entry key="..\:/Users/myria/Documents/GitHub/dmob/ParkTime/app/src/main/res/layout/text_horizontal_park.xml" value="0.13125267208208635" />
